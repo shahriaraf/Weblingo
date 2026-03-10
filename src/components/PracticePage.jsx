@@ -127,8 +127,6 @@ export default function PracticePage({ progress, onComplete }) {
   const [selected, setSelected] = useState(null);
   const [answered, setAnswered] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
-  const [showResult, setShowResult] = useState(false);
-  const [fillValue, setFillValue] = useState('');
   const [streak, setStreak] = useState(0);
 
   const challenge = PRACTICE_CHALLENGES[currentIdx % PRACTICE_CHALLENGES.length];
@@ -148,7 +146,6 @@ export default function PracticePage({ progress, onComplete }) {
     setCurrentIdx(i => i + 1);
     setSelected(null);
     setAnswered(false);
-    setFillValue('');
   };
 
   const diffColor = { beginner: '#22c55e', intermediate: '#eab308', advanced: '#ef4444' };
@@ -262,7 +259,6 @@ export default function PracticePage({ progress, onComplete }) {
                     fontFamily: 'Nunito, sans-serif',
                     fontWeight: 600, fontSize: '14px',
                     transition: 'all 0.2s',
-                    fontFamily: 'JetBrains Mono, monospace',
                   }}>
                     {opt}
                   </button>

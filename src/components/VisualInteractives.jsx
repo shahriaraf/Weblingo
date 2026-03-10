@@ -1,7 +1,7 @@
 // TagWise – Visual Interactive Components
 // These are the immersive, hands-on visual learning widgets
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 // ─── FLEXBOX LAB ─────────────────────────────────────────────────────────────
 export function FlexboxLab() {
@@ -549,12 +549,19 @@ export function SelectorGame() {
   const [challengeIdx, setChallengeIdx] = useState(0);
   const challenge = challenges[challengeIdx];
 
-  const handleElementClick = (el, idx) => {
-    setSelected(idx);
-    const correct = el.match;
-    setResult(correct ? 'correct' : 'wrong');
-    setTimeout(() => setResult(null), 1500);
-  };
+const handleElementClick = (el, idx) => {
+  if (result) return; // prevent clicking during feedback
+
+  setSelected(idx);
+  const correct = el.match;
+
+  setResult(correct ? 'correct' : 'wrong');
+
+  setTimeout(() => {
+    setResult(null);
+    setSelected(null);
+  }, 1500);
+};
 
   return (
     <div>

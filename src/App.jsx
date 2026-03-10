@@ -18,9 +18,7 @@ export default function App() {
   const {
     progress,
     completeLesson,
-    loseHeart,
     resetProgress,
-    xpForNextLevel,
     xpProgress,
   } = useProgress();
 
