@@ -987,7 +987,7 @@ export const jsLessons = [
     description: 'Work with text data in JavaScript.',
     type: 'visual-interactive',
     content: {
-     theory: 'Strings are text. Use template literals (`Hello ${name}`), string methods: .length, .toUpperCase(), .slice(), .includes(), .split().',
+     theory: 'Strings are text. Use template literals (Hello ${name}), string methods: .length, .toUpperCase(), .slice(), .includes(), .split().',
       visual: 'string-methods',
       interactive: { type: 'string-lab' }
     },
