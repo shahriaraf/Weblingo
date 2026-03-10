@@ -1,5 +1,5 @@
 // TagWise – Bottom Navigation
-import React from 'react';
+
 
 const NAV_ITEMS = [
   {

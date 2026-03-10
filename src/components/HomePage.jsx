@@ -1,5 +1,5 @@
 // TagWise – Home / Learn Page
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TRACK_META, TRACKS, getUnitsByTrack } from '../data/lessons';
 
 const XP_BAR_COLORS = {

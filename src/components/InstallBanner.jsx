@@ -1,5 +1,5 @@
 // TagWise – Install Banner Component
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { usePWAInstall } from '../hooks/usePWAInstall';
 
 export default function InstallBanner() {

@@ -1,5 +1,4 @@
 // TagWise – Top Navigation Bar
-import React from 'react';
 
 const icons = {
   heart: (filled) => (

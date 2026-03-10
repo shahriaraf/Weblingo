@@ -1,6 +1,5 @@
 // TagWise – Profile Page
-import React from 'react';
-import { TRACK_META, TRACKS, allLessons } from '../data/lessons';
+import { TRACK_META, TRACKS } from '../data/lessons';
 import { ACHIEVEMENTS } from '../hooks/useProgress';
 
 function LevelBadge({ level, xp, xpProgress }) {

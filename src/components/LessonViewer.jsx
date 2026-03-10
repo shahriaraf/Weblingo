@@ -1,5 +1,5 @@
 // TagWise – Lesson Viewer / Player
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { TRACK_META } from '../data/lessons';
 import { VISUAL_COMPONENTS, LESSON_VISUAL_MAP } from './VisualInteractives';
 

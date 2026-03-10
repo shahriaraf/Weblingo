@@ -1,6 +1,6 @@
 // TagWise – Practice Page
-import React, { useState } from 'react';
-import { allLessons, TRACK_META } from '../data/lessons';
+import { useState } from 'react';
+import { TRACK_META } from '../data/lessons';
 
 const PRACTICE_CHALLENGES = [
   {

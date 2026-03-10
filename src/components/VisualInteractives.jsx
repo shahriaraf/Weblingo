@@ -1,7 +1,7 @@
 // TagWise – Visual Interactive Components
 // These are the immersive, hands-on visual learning widgets
 
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 // ─── FLEXBOX LAB ─────────────────────────────────────────────────────────────
 export function FlexboxLab() {
@@ -526,7 +526,6 @@ export function PositionLab() {
 // ─── SELECTOR GAME ────────────────────────────────────────────────────────────
 export function SelectorGame() {
   const [selected, setSelected] = useState(null);
-  const [guess, setGuess] = useState('');
   const [result, setResult] = useState(null);
 
   const challenges = [
@@ -784,7 +783,6 @@ export function DocumentTree() {
             cursor: node.children.length > 0 ? 'pointer' : 'default',
             borderLeft: node.depth > 0 ? `2px solid ${node.color}30` : 'none',
             marginLeft: node.depth > 0 ? `${(node.depth - 1) * 20 + 10}px` : '0',
-            paddingLeft: '10px',
           }}
         >
           {node.children.length > 0 && (

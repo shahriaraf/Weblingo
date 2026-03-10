@@ -61,17 +61,17 @@ export function useProgress() {
 
   // Update streak on load
   useEffect(() => {
-    const today = new Date().toDateString();
-    if (progress.lastActiveDate !== today) {
-      const yesterday = new Date(Date.now() - 86400000).toDateString();
-      setProgress(p => ({
-        ...p,
-        streak: p.lastActiveDate === yesterday ? p.streak : 0,
-        lastActiveDate: today,
-        xpToday: 0,
-      }));
-    }
-  }, []);
+  const today = new Date().toDateString();
+  if (progress.lastActiveDate !== today) {
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    setProgress(p => ({
+      ...p,
+      streak: p.lastActiveDate === yesterday ? p.streak : 0,
+      lastActiveDate: today,
+      xpToday: 0,
+    }));
+  }
+}, [progress.lastActiveDate]);
 
   const completeLesson = useCallback((lessonId, xpEarned, score = 100) => {
     setProgress(p => {
